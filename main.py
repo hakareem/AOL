@@ -1,7 +1,7 @@
-import subprocess
+# import subprocess
 
-path = Path.cwd()
-file_path = path / 'LC' 
+# path = Path.cwd()
+# file_path = path / 'LC' 
 
 
 
