@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WAR</title>
-    <link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
+    <meta charset="utf-8" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
 
-    <link rel="stylesheet" href="style.css" />
+    <title>War Card Game</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.jpg" />
     <script src="main.js" defer></script>
   </head>
   <body>
-    <div>
-      <h1>Card Game</h1>
-      <button>Deal Two Cards</button>
-      <h2>Player 1</h2>
-      <img id="player1" src="" alt="card" />
-      <h2>Player 2</h2>
-      <img id="player2" src="" alt="card" />
-      <h3>Result</h3>
-    </div>
+    <section id="main">
+      <section id="heading">
+        <h1>DECLARE WAR!</h1>
+        <button>Deal Cards</button>
+        <h3></h3>
+      </section>
+      <img id="homePhoto" src="img/image.png" alt="playing cards" />
+      <section id="cardInfo">
+        <section id="player1Info">
+          <span>You</span>
+          <h6 id="player1Score">0</h6>
+          <section id="player1Cards">
+            <img id="player1" src="" />
+            <img id="player12" src="" />
+            <img id="player13" src="" />
+          </section>
+        </section>
+        <section id="player2Info">
+          <span>Computer</span>
+          <h6 id="player2Score">0</h6>
+          <section id="player2Cards">
+            <img id="player2" src="" />
+            <img id="player22" src="" />
+            <img id="player23" src="" />
+          </section>
+        </section>
+      </section>
+    </section>
   </body>
 </html>
