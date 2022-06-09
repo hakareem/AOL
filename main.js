@@ -18,10 +18,6 @@ function drawTwo() {
   const url = `https://www.deckofcardsapi.com/api/deck/${deckId}/draw/?count=2`;
   //hide card image
   document.querySelector("#homePhoto").style.display = "none";
-  document.querySelector("#player12").src = "";
-  document.querySelector("#player13").src = "";
-  document.querySelector("#player22").src = "";
-  document.querySelector("#player23").src = "";
 
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
@@ -87,19 +83,9 @@ function war(score1, score2) {
     .then((data) => {
       console.log(data);
       document.querySelector("#player1").src = data.cards[0].image;
-      document.querySelector("#player12").src = data.cards[1].image;
-      document.querySelector("#player13").src = data.cards[2].image;
-      document.querySelector("#player2").src = data.cards[3].image;
-      document.querySelector("#player22").src = data.cards[4].image;
-      document.querySelector("#player23").src = data.cards[5].image;
-      let player1Val =
-        Number(convertToNum(data.cards[0].value)) +
-        Number(convertToNum(data.cards[1].value)) +
-        Number(convertToNum(data.cards[2].value));
-      let player2Val =
-        Number(convertToNum(data.cards[3].value)) +
-        Number(convertToNum(data.cards[4].value)) +
-        Number(convertToNum(data.cards[5].value));
+      document.querySelector("#player2").src = data.cards[1].image;
+      let player1Val = Number(convertToNum(data.cards[0].value));
+      let player2Val = Number(convertToNum(data.cards[1].value));
       console.log(player1Val, player2Val);
       if (player1Val > player2Val) {
         document.querySelector("h3").innerText = "You Win!";
@@ -123,10 +109,9 @@ function war(score1, score2) {
           war(score1, score2);
         }, 2500);
       }
-      // return score1, score2
+      return score1, score2;
     })
     .catch((err) => {
       console.log(`error ${err}`);
     });
-  return score1, score2;
 }
